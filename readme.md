@@ -3,7 +3,7 @@
 </p>
 
 <p align='center'>
-    基于iris和blot的短信验证码服务
+    基于iris和bolt的短信验证码服务
 </p>
 
 <br>
