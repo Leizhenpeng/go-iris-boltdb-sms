@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "8e260b9c-4622-4a66-a830-908cc88be1a3",
+		"name": "go-iris-bolt-sms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17977350"
+	},
+	"item": [
+		{
+			"name": "Total",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sms/total",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sms",
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear ALl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sms/clear",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sms",
+						"clear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\":\"13995928703\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sms/new",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sms",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"code\": \"SMhDU\",\n    \"phone\": \"13995928703\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sms/check",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sms",
+						"check"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
