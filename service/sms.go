@@ -57,9 +57,12 @@ func (s SmsCoreImpl) GenCode(phone string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	// 5s expire
 	model.DbNow.Expire(phone, viper.GetInt("EXPIRE"))
-	//TxSendSms(phone, sNew)
+	err = TxSendSms(phone, sNew)
+	if err != nil {
+		model.DbNow.Del(phone)
+		return "", err
+	}
 	return sNew, nil
 }
 
